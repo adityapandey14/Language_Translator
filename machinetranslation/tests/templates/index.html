@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Language Translator</title>
+</head>
+<body>
+    <h1>Language Translator</h1>
+    <form action="/translate" method="post">
+        <label for="inputText">Enter text to translate:</label><br>
+        <textarea id="inputText" name="inputText" rows="5" cols="40"></textarea><br>
+        <label for="translateDirection">Select translation direction:</label><br>
+        <select id="translateDirection" name="translateDirection">
+            <option value="en-fr">English to French</option>
+            <option value="fr-en">French to English</option>
+        </select><br>
+        <input type="submit" value="Translate">
+    </form>
+    <br>
+    <h2>Translation Result:</h2>
+    <p>{{ translation_text }}</p>
+</body>
+</html>
